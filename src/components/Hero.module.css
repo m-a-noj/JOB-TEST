@@ -2,8 +2,10 @@
 
 /* Set the height to 50vh by default */
 .custom-carousel-image {
-  object-fit: cover; /* Ensure the image fills the container */
-  height: 50vh; /* Set the height to 50% of the viewport height */
+  object-fit: contain; /* Ensure the image fills the container */
+  height: 50vh;
+
+  /* Set the height to 50% of the viewport height */
 }
 
 /* For smaller devices like mobile (max-width: 767px) */
@@ -23,6 +25,10 @@
 /* For larger screens (desktop) */
 @media (min-width: 1024px) {
   .custom-carousel-image {
-    height: 80vh; /* Increase height for larger screens */
+    height: 80vh;
+    object-fit: cover;
+
+    width: auto;
+    /* Increase height for larger screens */
   }
 }

@@ -1,69 +1,150 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import myimage from "../assets/bg-logo.png";
+
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false); // State to track navbar collapse
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeNavbar = () => {
+    setIsOpen(false);
+  };
+
   const imageStyles = {
-    width: "100px", // Set the width of the image
-    height: "auto", // Maintain the aspect ratio
-    borderRadius: "10%", // Make the image round
+    width: "100px",
+    height: "auto",
+    borderRadius: "10%",
+  };
+  const responsiveImageStyles = {
+    width: "150px", // Increase size on small screens
+    height: "70px",
+    borderRadius: "10%",
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container">
-        <a className="navbar-brand" href="#">
-          <img src={myimage} alt="Logo" style={imageStyles} />
-        </a>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top py-0 my-0">
+      <div className="container ">
+        {/* Logo Redirects to Home */}
+        <Link className="navbar-brand" to="/" onClick={closeNavbar}>
+          <img
+            src={myimage}
+            alt="Logo"
+            style={
+              window.innerWidth < 576 ? responsiveImageStyles : imageStyles
+            }
+          />
+        </Link>
+
+        {/* Toggle Button */}
         <button
-          className="navbar-toggler"
+          className={`navbar-toggler ${isOpen ? "" : "collapsed"}`}
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          onClick={handleToggle}
           aria-controls="navbarNav"
-          aria-expanded="false"
+          aria-expanded={isOpen}
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                NUMERICAL ABILITY
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#"></a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                REASONING
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                ENGLISH
-              </a>
-            </li>
 
+        {/* Navbar Menu */}
+        <div
+          className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}
+          id="navbarNav"
+        >
+          <ul className="navbar-nav fw-semi-bold hover-text-danger  ">
+            <li className="nav-item  ">
+              <Link
+                className="nav-link active text-primary"
+                to="/numerical-ability"
+                onClick={closeNavbar}
+              >
+                NUMERICAL ABILITY
+              </Link>
+            </li>
+            <li className="nav-item ">
+              <Link
+                className="nav-link active text-primary "
+                to="/reasoning"
+                onClick={closeNavbar}
+              >
+                REASONING
+              </Link>
+            </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link
+                className="nav-link active text-primary"
+                to="/english"
+                onClick={closeNavbar}
+              >
+                ENGLISH
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link active text-primary"
+                to="/computer"
+                onClick={closeNavbar}
+              >
                 COMPUTER
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                EXAM DETAILS
-              </a>
+              <Link
+                className="nav-link active text-primary"
+                to="/hindi"
+                onClick={closeNavbar}
+              >
+                HINDI
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                ONLINE TEST
-              </a>
+              <Link
+                className="nav-link active text-primary"
+                to="/static-gk"
+                onClick={closeNavbar}
+              >
+                STATIC GK
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link
+                className="nav-link active text-primary"
+                to="/current-affairs"
+                onClick={closeNavbar}
+              >
                 CURRENT AFFAIRS
-              </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link active text-primary"
+                to="/exam-details"
+                onClick={closeNavbar}
+              >
+                EXAM DETAILS
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link active text-primary"
+                to="/online-test"
+                onClick={closeNavbar}
+              >
+                ONLINE TEST
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link active text-primary"
+                to="/plan"
+                onClick={closeNavbar}
+              >
+                PLAN
+              </Link>
             </li>
           </ul>
         </div>

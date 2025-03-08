@@ -3,10 +3,12 @@
   height: 100vh;
 }
 .page-two {
+  background-color: #ffee76;
   color: white;
   height: 100vh;
 }
 .page-three {
+  background-color: #ffee76;
   color: white;
   height: 100vh;
 }
@@ -14,4 +16,16 @@
   background-color: #db3434; /* Blue */
   color: white;
   height: 100vh;
+}
+.card:hover {
+  background-color: rgba(0, 86, 179, 0.2);
+}
+.footercss {
+  background-color: #71a8fb;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:active {
+  color: rgba(255, 204, 0, 1) !important; /* Yellow on hover */
+  background-color: rgba(0, 123, 255, 0.1); /* Light Blue background */
+  transition: all 0.3s ease-in-out;
 }

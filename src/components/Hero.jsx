@@ -1,5 +1,7 @@
 import React from "react";
-import myimage from "../assets/logo1.jpg";
+import myimage from "../assets/heroBanner.png";
+import myimage2 from "../assets/heroBanner2.png";
+import myimage3 from "../assets/heroBanner3.png";
 import styles from "./Hero.module.css"; // Import the custom CSS for the object-fit styles
 
 const Hero = () => {
@@ -35,20 +37,16 @@ const Hero = () => {
         ></button>
       </div>
       <div className="carousel-inner">
-        <div className="carousel-item active">
+        <div className="carousel-item active" data-bs-interval="1400">
           <img
             src={myimage}
             className={`${styles["custom-carousel-image"]}  d-block w-100`}
             alt="..."
           />
-          <div className="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
-          </div>
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item" data-bs-interval="1400">
           <img
-            src={myimage}
+            src={myimage2}
             className={`${styles["custom-carousel-image"]} d-block w-100`}
             alt="..."
           />
@@ -57,16 +55,12 @@ const Hero = () => {
             <p>Some representative placeholder content for the second slide.</p>
           </div>
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item" data-bs-interval="1400">
           <img
-            src={myimage}
+            src={myimage3}
             className={`${styles["custom-carousel-image"]} d-block w-100`}
             alt="..."
           />
-          <div className="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
         </div>
       </div>
       <button

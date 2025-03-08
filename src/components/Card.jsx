@@ -1,7 +1,8 @@
 import React from "react";
 import { SlTrophy } from "react-icons/sl";
+import "../css/hero.css";
 
-const Card = ({ description, tittle }) => {
+const Card = ({ tittle }) => {
   return (
     <div
       className="card"
@@ -12,9 +13,18 @@ const Card = ({ description, tittle }) => {
         height: "100%", // Keeps card height consistent
       }}
     >
-      <div style={{ textAlign: "center" }}>
+      <div
+        style={{
+          textAlign: "center",
+          borderRadius: "0%",
+        }}
+      >
         <SlTrophy
-          style={{ fontSize: "4rem", marginBottom: "10px", marginTop: "8px" }}
+          style={{
+            fontSize: "4rem",
+            marginBottom: "10px",
+            marginTop: "15px",
+          }}
         />
       </div>
       <div
@@ -22,8 +32,8 @@ const Card = ({ description, tittle }) => {
         style={{ textAlign: "center", padding: "15px" }}
       >
         <h5 className="card-title">{tittle}</h5>
-        <p className="card-text">{description}</p>
-        <a href="#" className="btn btn-primary btn-block">
+        <p className="card-text"></p>
+        <a href="#" className="btn btn-outline-primary btn-block">
           <p className="text-center fs-5 m-0">{tittle}</p>
         </a>
       </div>

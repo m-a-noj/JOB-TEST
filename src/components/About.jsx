@@ -3,19 +3,19 @@ import image from "../assets/bg-logo.png";
 
 const About = () => {
   return (
-    <div className="px-4 py-5  text-center">
+    <div className="text-center " style={{ backgroundColor: "#F8F9FA" }}>
       <img
-        className="d-block mx-auto mb-4"
+        className="d-block mx-auto mb-4 "
         src={image}
         alt=""
-        width="200"
-        height="200"
+        width="240"
+        height="180"
       />
-      <h1 className="display-5  fw-bold text-body-emphasis">
+      <h1 className="display-5 fw-normal text-body-emphasis">
         Welcome To Cracktest - An Online Exam Practice Website
       </h1>
       <div className="col-lg-6 mx-auto">
-        <p className="lead mb-4 mt-3 text-primary-emphasis">
+        <p className="lead mb-4 mt-4 text-primary-emphasis">
           Unique and smart way to online Exam practice, Multiple Choice
           Questions in English & Hindi language with Solutions. Cracktest
           provide Subject wise and Topic wise MCQ's for ease of learning.
