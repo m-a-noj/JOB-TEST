@@ -2,7 +2,8 @@ import React from "react";
 import { SlTrophy } from "react-icons/sl";
 import "../css/hero.css";
 
-const Card = ({ tittle }) => {
+const Card = ({ tittle, image }) => {
+  console.log(image);
   return (
     <div
       className="card"
@@ -19,10 +20,11 @@ const Card = ({ tittle }) => {
           borderRadius: "0%",
         }}
       >
-        <SlTrophy
+        <img
+          src={`/assetss/${image}.webp`}
           style={{
-            fontSize: "4rem",
-            marginBottom: "10px",
+            height: "40px",
+            width: "40px",
             marginTop: "15px",
           }}
         />

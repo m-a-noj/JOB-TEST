@@ -21,15 +21,20 @@ const NumericalAbility = () => {
     { tittle: " Problem on Trains" },
   ];
   return (
-    <div classNadivme="container-fluid">
+    <div className="container-fluid mt-3">
       <div className="row">
-        <SideBar />
-        <PageContent
-          heding={
-            "NUMERICAL ABILITY - Subject Wise Multiple Choice Questions (MCQ)"
-          }
-          topicData={topicData}
-        />
+        {/* Sidebar on the left for large screens, below for small screens */}
+        <div className="col-lg-3 col-12  order-lg-0 order-1">
+          <SideBar />
+        </div>
+
+        {/* PageContent beside Sidebar (Desktop), above Sidebar on Mobile */}
+        <div className="col-lg-9 col-12 order-lg-1 order-0">
+          <PageContent
+            heading="NUMERICAL ABILITY - Multiple Choice Questions"
+            topicData={topicData}
+          />
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import myimage from "../assets/bg-logo.png";
+import Translator from "./Translator";
+import "../css/trnslator.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to track navbar collapse
@@ -23,9 +25,18 @@ const Navbar = () => {
     height: "70px",
     borderRadius: "10%",
   };
+  const navbarStyles = {
+    background: "rgba(255, 255, 255, 0.2)", // Light transparent white
+    backdropFilter: "blur(10px)", // Blur effect
+    WebkitBackdropFilter: "blur(10px)", // Safari support
+    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)", // Soft shadow
+  };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top py-0 my-0">
+    <nav
+      className="navbar  navbar-expand-lg  fixed-top py-0 my-0"
+      style={{ backgroundColor: "#ffff" }}
+    >
       <div className="container ">
         {/* Logo Redirects to Home */}
         <Link className="navbar-brand" to="/" onClick={closeNavbar}>
@@ -147,6 +158,9 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
+          <div className="d-none d-lg-block ms-auto">
+            <Translator />
+          </div>
         </div>
       </div>
     </nav>

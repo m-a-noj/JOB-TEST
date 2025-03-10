@@ -16,42 +16,44 @@ import OnlineTest from "./components/pages/OnlineTest";
 import Plan from "./components/pages/Plan";
 import { Reasoning } from "./components/pages/Reasoning";
 import { StaticGk } from "./components/pages/StaticGk";
-
+import "./App.css";
+import ScrollTop from "./components/pages/ScrollTop";
 function App() {
   const heading = "exam";
   const data = [
-    { description: "Get expert bank exam preparation...", tittle: "Science" },
-    { description: "Master math concepts...", tittle: "Computer" },
-    { description: "Sharpen logical thinking...", tittle: "Static GK" },
+    { image: "science", tittle: "Science" },
+    { image: "computer", tittle: "Computer" },
+    { image: "gk", tittle: "Static GK" },
     {
-      description: "Improve your English language...",
+      image: "news",
       tittle: "Current Affairs",
     },
     {
-      description: "Gain essential computer knowledge...",
-      tittle: "Number Ability",
+      image: "Number",
+      tittle: "Numerical Ability",
     },
-    { description: "Take practice tests online...", tittle: "Reasoning" },
-    { description: "Simulate real exam conditions...", tittle: "Hindi" },
-    { description: "Simulate real exam conditions...", tittle: "English" },
-    { description: "Simulate real exam conditions...", tittle: "Mathematic" },
+    { image: "reasoning", tittle: "Reasoning" },
+    { image: "hindi", tittle: "Hindi" },
+    { image: "english", tittle: "English" },
+    { image: "math", tittle: "Mathematic" },
   ];
 
   const examData = [
-    { tittle: "Bank" },
-    { tittle: "SSC GD" },
-    { tittle: "Railway" },
-    { tittle: "Delhi Police" },
-    { tittle: "DSSSB" },
-    { tittle: "SSC CGL" },
-    { tittle: "SSC CPO" },
-    { tittle: "Current Affairs" },
+    { tittle: "Bank", image: "bank" },
+    { tittle: "SSC GD", image: "ssc" },
+    { tittle: "Railway", image: "railway" },
+    { tittle: "Delhi Police", image: "delhi" },
+    { tittle: "DSSSB", image: "delhi" },
+    { tittle: "SSC CGL", image: "ssc" },
+    { tittle: "SSC CPO", image: "ssc" },
+    ,
   ];
 
   return (
     <Router>
       <div className="app-container">
         {/* Navbar - Always Visible */}
+        <ScrollTop />
         <Navbar />
 
         {/* Routes */}

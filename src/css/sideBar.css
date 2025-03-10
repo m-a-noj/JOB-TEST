@@ -1,0 +1,58 @@
+/* Sidebar Styling */
+.sidebar {
+  background: #f8f9fa; /* Light gray background */
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Title */
+.sidebar-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Sidebar List */
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Sidebar Items */
+.sidebar-item {
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+/* Sidebar Links */
+.sidebar-link {
+  text-decoration: none;
+  color: #343a40;
+  font-weight: 500;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+/* Sidebar Item Hover Effect */
+.sidebar-item:hover {
+  background: #e9ecef;
+}
+
+/* Sidebar Text for Non-Clickable Items */
+.sidebar-text {
+  color: #6c757d;
+  display: block;
+  font-weight: 500;
+  padding: 8px 12px;
+}
+
+/* Mobile Layout: Sidebar Below Content */
+@media (max-width: 768px) {
+  .sidebar {
+    margin-top: 20px; /* Adds spacing when moved below */
+  }
+}

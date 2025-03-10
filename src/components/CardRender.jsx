@@ -32,7 +32,7 @@ const CardRender = ({ data }) => {
 
       {data.map((item, index) => (
         <div key={index} style={{ marginBottom: "20px" }}>
-          <Card tittle={item.tittle} />
+          <Card tittle={item.tittle} image={item.image} />
         </div>
       ))}
     </div>

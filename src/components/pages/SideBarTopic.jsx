@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../../css/sideBar.css"; // Import sidebar styles
 
 export const SideBarTopic = ({ topicName }) => {
   // Define correct paths for each topic based on App.jsx routes
@@ -17,26 +18,20 @@ export const SideBarTopic = ({ topicName }) => {
   };
 
   return (
-    <div className="col-12 col-lg-3 ms-3 text-black p-3 order-3 order-lg-0 bg-light rounded shadow-sm">
-      <h4 className="mb-3 fw-bold text-primary">Topics</h4>
-
-      <ul className="list-group">
+    <div className="sidebar my-5 p-3">
+      <h4 className="sidebar-title  fs-4 fw-semibold text-black">Topics</h4>
+      <ul className="sidebar-list">
         {topicName.map((data, index) => {
-          const path = validRoutes[data]; // Get the correct path
+          const path = validRoutes[data];
 
           return (
-            <li key={index} className="list-group-item border-0">
+            <li key={index} className="sidebar-item">
               {path ? (
-                <Link
-                  to={path}
-                  className="text-decoration-none text-dark fw-medium d-block py-2"
-                >
+                <Link to={path} className="sidebar-link fw-semi-bold fs-5">
                   {data}
                 </Link>
               ) : (
-                <span className="text-muted fw-medium d-block py-2">
-                  {data}
-                </span> // Show as text if no valid path
+                <span className="sidebar-text fw-bold">{data}</span> // Show as text if no valid path
               )}
             </li>
           );

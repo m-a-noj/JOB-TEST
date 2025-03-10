@@ -1,0 +1,47 @@
+/* Translator Container */
+.translator-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #007bff; /* Blue background */
+  padding: 3px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+/* Hover Effect */
+.translator-container:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Translator Icon */
+.translator-icon {
+  color: white;
+}
+
+/* Language Dropdown */
+.translator-select {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  padding: 2px 5px;
+}
+
+/* Custom Dropdown Arrow */
+.translator-select option {
+  color: black;
+}
+/* Ensure proper placement */
+.translator-mobile {
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust margins for proper spacing */
+.translator-mobile select {
+  margin-left: 5px;
+}
